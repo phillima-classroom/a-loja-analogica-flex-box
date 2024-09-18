@@ -10,9 +10,9 @@ body{
 }
 
 main{
-    margin-top: 2%;
     max-width: 2000px;
     margin: 0 auto;
+    margin-top: 1em;
 }
 
 .card__container{
@@ -31,13 +31,23 @@ main{
     background-color: #FFF;
     padding: 1% 0;
     height: 60vh;
-    box-shadow: 0 0.5px 1px;
+    max-height: 400px;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgb(150, 191, 191);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0.5% 0;
     flex: 0 300px;
+}
+
+img{
+    object-fit: contain;
+    max-width: 100%;
+    align-self: center;
+    margin: 0 auto;
+    aspect-ratio: 16/10;
+    background-color: rgb(246, 246, 245);
 }
 
 .card__nome{
@@ -54,15 +64,6 @@ main{
 .card__descricao{
     padding: 1% 2%;
     font-size: 0.9rem;
-}
-
-img{
-    object-fit: contain;
-    max-width: 100%;
-    align-self: center;
-    margin: 0 auto;
-    aspect-ratio: 16/10;
-    background-color: rgb(246, 246, 245);
 }
 
 .card__item > button{
@@ -92,35 +93,71 @@ footer{
     width: 100%;
 }
 
+/* Header */
+
+header{
+    background-color: rgb(85, 170, 245);
+    position: sticky;
+    top: 0;
+    height: 7vh;
+}
+
 ul{
-    
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+}
+
+ul,nav{
+    height: 7vh;
 }
 
 ul > li{
     display: inline-block;
 }
 
-li > a{
+li {
+   a{
     font-size: 1.5rem;
-}
-
-
-
-header{
-    background-color: rgb(85, 170, 245);
-    position: sticky;
-    top: 0;
-    height: 5vh;
-}
-
-header > nav, nav > ul {
-    height: 5vh;
-}
-
-li > a{
+    text-decoration: none;
     color: white;
+   }
+   
+   a:hover{
+    text-decoration: underline;
+    color: rgb(233, 228, 228);
+   }
+}
+
+/* Main Header */
+
+.main__header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+    position: static;
+    justify-content: space-around;
+    padding: 0 10rem;
+
+    img{
+        width: 10%;
+        aspect-ratio: 16/9;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .main__header{
+        h1{
+            font-size: 1rem;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+        }
+        img{
+            display: none;
+        }
+    }
 }
