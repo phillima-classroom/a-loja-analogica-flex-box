@@ -1,63 +1,126 @@
 *{
-    background-color: aliceblue;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+main{
+    margin-top: 2%;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.card__container{
+    width: 80%;
+    padding: 1%;
+    gap: 1%;
+    margin: 0 auto;
+    display: flex;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card__item{
-    width: 20%;
-    min-height: 30vh;
-    height: 30vh;
+    background-color: #FFF;
+    padding: 1% 0;
+    height: 40vh;
     box-shadow: 0 0.5px 1px;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     margin: 0.5% 0;
-}
-
-.card__container{
-    width: 80%;
-    height: 99vh;
-    padding: 1%;
-    gap: 1%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-}
-
-img{
-    object-fit:contain;
-    /* max-width: inherit;
-    max-height: inherit; */
-    width: 85%;
-    height: 60%;
-    /* align-self: center;
-    align-content: center; */
+    flex: 0 300px;
 }
 
 .card__nome{
-    font-size: 1.5rem;
+    margin-top: 5%;
+    font-size: 1.2rem;
+    padding: 1% 2%;
 }
 
 .card__preco{
-    font-size: 1.5rem;
+    font-size: 1rem;
+    padding: 1% 2%;
 }
+
+.card__descricao{
+    padding: 1% 2%;
+    font-size: 0.9rem;
+}
+
+img{
+    object-fit: contain;
+    max-width: 100%;
+    align-self: center;
+    margin: 0 auto;
+    aspect-ratio: 16/10;
+    background-color: rgb(246, 246, 245);
+}
+
+.card__item > button{
+    border: none;
+    background-color: rgb(0, 0, 137);
+    color: white;
+    border-radius: 20rem;
+    width: 50%;
+    height: 10%;
+    max-height: 10%;
+    margin-top: auto;
+    align-self: center;
+    transition: transform .5s;
+}
+
+.card__item > button:hover{
+    transform: scale(1.2);
+}
+
 
 h1{
     text-align: center;
 }
+
 footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
     text-align: center;
     width: 100%;
+}
+
+ul{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+ul > li{
+    display: inline-block;
+}
+
+li > a{
+    font-size: 1.5rem;
+}
+
+
+
+header{
+    background-color: rgb(85, 170, 245);
+    position: sticky;
+    top: 0;
+    height: 5vh;
+}
+
+header > nav, nav > ul {
+    height: 5vh;
+}
+
+li > a{
+    color: white;
 }
