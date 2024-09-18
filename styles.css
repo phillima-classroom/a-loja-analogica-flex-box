@@ -30,7 +30,7 @@ main{
 .card__item{
     background-color: #FFF;
     padding: 1% 0;
-    height: 40vh;
+    height: 60vh;
     box-shadow: 0 0.5px 1px;
     border-radius: 1rem;
     display: flex;
